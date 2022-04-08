@@ -3,9 +3,9 @@ package com.mycompany.invoise.controller;
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
 
-public class InvoiceControllerMichel implements IInvoiceController {
+import java.util.Scanner;
 
-    private IInvoiceService invoiceService;
+public class InvoiceControllerKeyboard implements IInvoiceController {
 
     public IInvoiceService getInvoiceService() {
         return invoiceService;
@@ -15,8 +15,12 @@ public class InvoiceControllerMichel implements IInvoiceController {
         this.invoiceService = invoiceService;
     }
 
+    private IInvoiceService invoiceService;
+
     public void createInvoice() {
-        var customerName = "Tesla";
+        System.out.println( "What is the customer name ?" );
+        Scanner scanner = new Scanner(System.in);
+        var customerName = scanner.nextLine();
 
         var invoice = new Invoice();
         invoice.setCustomerName(customerName);

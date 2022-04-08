@@ -3,11 +3,9 @@ package com.mycompany.invoise.service;
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.repository.IInvoiceRepository;
 
-public class InvoiceServiceMichel implements IInvoiceService {
+public class InvoiceServiceNumber implements IInvoiceService {
 
-    private static long lastNumber = 112L;
-
-    private IInvoiceRepository invoiceRepository;
+    private static long lastNumber = 0L;
 
     public IInvoiceRepository getInvoiceRepository() {
         return invoiceRepository;
@@ -17,8 +15,10 @@ public class InvoiceServiceMichel implements IInvoiceService {
         this.invoiceRepository = invoiceRepository;
     }
 
+    private IInvoiceRepository invoiceRepository;
+
     public void createInvoice(Invoice invoice) {
-        invoice.setNumber("INV_" + ++lastNumber);
+        invoice.setNumber(String.valueOf(++lastNumber));
         invoiceRepository.create(invoice);
     }
 }

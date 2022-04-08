@@ -3,7 +3,7 @@ package com.mycompany.invoise.controller;
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
 
-public class InvoiceControllerChambouleToutMagasin2 implements IInvoiceController {
+public class InvoiceControllerDouchette implements IInvoiceController {
     public IInvoiceService getInvoiceService() {
         return invoiceService;
     }
