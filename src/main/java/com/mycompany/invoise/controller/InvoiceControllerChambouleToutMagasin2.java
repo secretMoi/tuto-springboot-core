@@ -3,10 +3,7 @@ package com.mycompany.invoise.controller;
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
 
-public class InvoiceControllerMichel implements IInvoiceController {
-
-    private IInvoiceService invoiceService;
-
+public class InvoiceControllerChambouleToutMagasin2 implements IInvoiceController {
     public IInvoiceService getInvoiceService() {
         return invoiceService;
     }
@@ -15,12 +12,14 @@ public class InvoiceControllerMichel implements IInvoiceController {
         this.invoiceService = invoiceService;
     }
 
+    private IInvoiceService invoiceService;
+
+    @Override
     public void createInvoice() {
-        var customerName = "Tesla";
+        System.out.println("Utilise la douchette");
 
-        var invoice = new Invoice();
-        invoice.setCustomerName(customerName);
-
+        Invoice invoice = new Invoice();
+        invoice.setCustomerName("clientX");
         invoiceService.createInvoice(invoice);
     }
 }

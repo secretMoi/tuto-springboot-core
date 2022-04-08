@@ -9,6 +9,14 @@ public class InvoiceServiceMichel implements IInvoiceService {
 
     private IInvoiceRepository invoiceRepository;
 
+    public IInvoiceRepository getInvoiceRepository() {
+        return invoiceRepository;
+    }
+
+    public void setInvoiceRepository(IInvoiceRepository invoiceRepository) {
+        this.invoiceRepository = invoiceRepository;
+    }
+
     public void createInvoice(Invoice invoice) {
         invoice.setNumber("INV_" + ++lastNumber);
         invoiceRepository.create(invoice);
