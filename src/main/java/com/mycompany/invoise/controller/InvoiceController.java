@@ -1,13 +1,15 @@
 package com.mycompany.invoise.controller;
 
 import com.mycompany.invoise.model.Invoice;
-import com.mycompany.invoise.service.InvoiceService;
+import com.mycompany.invoise.service.IInvoiceService;
 
 import java.util.Scanner;
 
-public class InvoiceController {
+public class InvoiceController implements IInvoiceController {
 
-    public void createInvoiceUsingConsole() {
+    private IInvoiceService invoiceService;
+
+    public void createInvoice() {
         System.out.println( "What is the customer name ?" );
         Scanner scanner = new Scanner(System.in);
         var customerName = scanner.nextLine();
@@ -15,7 +17,6 @@ public class InvoiceController {
         var invoice = new Invoice();
         invoice.setCustomerName(customerName);
 
-        var invoiceService = new InvoiceService();
         invoiceService.createInvoice(invoice);
     }
 }
