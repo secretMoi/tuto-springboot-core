@@ -1,16 +1,16 @@
 package com.mycompany.invoise.service;
 
 import com.mycompany.invoise.model.Invoice;
-import com.mycompany.invoise.repository.InvoiceRepositoryMichel;
+import com.mycompany.invoise.repository.IInvoiceRepository;
 
-public class InvoiceServiceMichel {
+public class InvoiceServiceMichel implements IInvoiceService {
 
     private static long lastNumber = 112L;
 
-    private InvoiceRepositoryMichel invoiceRepositoryMichel = new InvoiceRepositoryMichel();
+    private IInvoiceRepository invoiceRepository;
 
     public void createInvoice(Invoice invoice) {
         invoice.setNumber("INV_" + ++lastNumber);
-        invoiceRepositoryMichel.create(invoice);
+        invoiceRepository.create(invoice);
     }
 }
