@@ -7,6 +7,14 @@ public class InvoiceService implements IInvoiceService {
 
     private static long lastNumber = 0L;
 
+    public IInvoiceRepository getInvoiceRepository() {
+        return invoiceRepository;
+    }
+
+    public void setInvoiceRepository(IInvoiceRepository invoiceRepository) {
+        this.invoiceRepository = invoiceRepository;
+    }
+
     private IInvoiceRepository invoiceRepository;
 
     public void createInvoice(Invoice invoice) {
