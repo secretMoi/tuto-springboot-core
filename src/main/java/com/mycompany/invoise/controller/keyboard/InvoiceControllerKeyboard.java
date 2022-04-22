@@ -1,5 +1,6 @@
-package com.mycompany.invoise.controller;
+package com.mycompany.invoise.controller.keyboard;
 
+import com.mycompany.invoise.controller.IInvoiceController;
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
 import org.springframework.stereotype.Controller;

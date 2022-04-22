@@ -1,7 +1,8 @@
-package com.mycompany.invoise.service;
+package com.mycompany.invoise.service.number;
 
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.repository.IInvoiceRepository;
+import com.mycompany.invoise.service.IInvoiceService;
 import org.springframework.stereotype.Service;
 
 @Service
