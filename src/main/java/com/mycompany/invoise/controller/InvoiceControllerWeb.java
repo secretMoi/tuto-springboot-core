@@ -3,7 +3,9 @@ package com.mycompany.invoise.controller;
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class InvoiceControllerWeb implements IInvoiceController {
 
     @Autowired

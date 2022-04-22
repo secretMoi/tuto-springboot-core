@@ -2,9 +2,11 @@ package com.mycompany.invoise.controller;
 
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
+import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
 
+@Controller
 public class InvoiceControllerKeyboard implements IInvoiceController {
 
     public IInvoiceService getInvoiceService() {
