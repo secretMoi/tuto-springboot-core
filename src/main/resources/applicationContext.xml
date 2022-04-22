@@ -7,14 +7,15 @@
 
     <context:annotation-config />
     <context:property-placeholder location="application.properties" />
+    <context:component-scan base-package="com.mycompany.invoise" />
 
-    <bean id="invoiceService" class="com.mycompany.invoise.service.InvoiceServicePrefix">
+<!--    <bean id="invoiceService" class="com.mycompany.invoise.service.InvoiceServicePrefix">-->
 
-    </bean>
+<!--    </bean>-->
 
-    <bean class="com.mycompany.invoise.controller.InvoiceControllerWeb" />
+<!--    <bean class="com.mycompany.invoise.controller.InvoiceControllerWeb" />-->
 
-    <bean id="invoiceRepository" class="com.mycompany.invoise.repository.InvoiceRepositoryDatabase"/>
+<!--    <bean id="invoiceRepository" class="com.mycompany.invoise.repository.InvoiceRepositoryDatabase"/>-->
 
 
 </beans>
