@@ -5,7 +5,7 @@ import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
 import org.springframework.stereotype.Controller;
 
-@Controller
+
 public class InvoiceControllerDouchette implements IInvoiceController {
     public IInvoiceService getInvoiceService() {
         return invoiceService;

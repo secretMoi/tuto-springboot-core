@@ -5,7 +5,7 @@ import com.mycompany.invoise.repository.IInvoiceRepository;
 import com.mycompany.invoise.service.IInvoiceService;
 import org.springframework.stereotype.Service;
 
-@Service
+
 public class InvoiceServiceNumber implements IInvoiceService {
 
     private static long lastNumber = 0L;

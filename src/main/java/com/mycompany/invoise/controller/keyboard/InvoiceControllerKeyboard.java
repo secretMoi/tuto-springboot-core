@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
 
-@Controller
+
 public class InvoiceControllerKeyboard implements IInvoiceController {
 
     public IInvoiceService getInvoiceService() {
