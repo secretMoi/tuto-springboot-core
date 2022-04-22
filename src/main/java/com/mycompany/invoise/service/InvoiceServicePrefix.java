@@ -3,10 +3,14 @@ package com.mycompany.invoise.service;
 import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.repository.IInvoiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 public class InvoiceServicePrefix implements IInvoiceService {
 
+    @Value("${invoice.lastNumber}")
     private long lastNumber;
+
+    @Value("${invoice.prefix}")
     private String prefix;
 
     @Autowired
