@@ -17,11 +17,11 @@ public class InvoiceControllerDouchette implements IInvoiceController {
     private IInvoiceService invoiceService;
 
     @Override
-    public void createInvoice() {
+    public String createInvoice(Invoice invoice) {
         System.out.println("Utilise la douchette");
 
-        Invoice invoice = new Invoice();
         invoice.setCustomerName("clientX");
         invoiceService.createInvoice(invoice);
+        return null;
     }
 }
