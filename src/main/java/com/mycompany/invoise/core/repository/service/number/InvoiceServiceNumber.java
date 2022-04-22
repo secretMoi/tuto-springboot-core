@@ -1,8 +1,8 @@
-package com.mycompany.invoise.service.number;
+package com.mycompany.invoise.core.repository.service.number;
 
-import com.mycompany.invoise.model.Invoice;
-import com.mycompany.invoise.repository.IInvoiceRepository;
-import com.mycompany.invoise.service.IInvoiceService;
+import com.mycompany.invoise.core.repository.model.Invoice;
+import com.mycompany.invoise.core.repository.IInvoiceRepository;
+import com.mycompany.invoise.core.repository.service.IInvoiceService;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.mycompany.invoise.repository;
+package com.mycompany.invoise.core.repository;
 
-import com.mycompany.invoise.model.Invoice;
+import com.mycompany.invoise.core.repository.model.Invoice;
 
 import java.util.List;
 
