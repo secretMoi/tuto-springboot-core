@@ -19,14 +19,14 @@ public class InvoiceControllerKeyboard implements IInvoiceController {
 
     private IInvoiceService invoiceService;
 
-    public void createInvoice() {
+    public String createInvoice(Invoice invoice) {
         System.out.println( "What is the customer name ?" );
         Scanner scanner = new Scanner(System.in);
         var customerName = scanner.nextLine();
 
-        var invoice = new Invoice();
         invoice.setCustomerName(customerName);
 
         invoiceService.createInvoice(invoice);
+        return null;
     }
 }
