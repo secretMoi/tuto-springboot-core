@@ -1,6 +1,6 @@
 package com.mycompany.invoise.core.repository.database;
 
-import com.mycompany.invoise.core.repository.model.Invoice;
+import com.mycompany.invoise.core.model.Invoice;
 import com.mycompany.invoise.core.repository.IInvoiceRepository;
 import org.springframework.stereotype.Repository;
 
@@ -28,5 +28,15 @@ public class InvoiceRepositoryDatabase implements IInvoiceRepository {
         invoice2.setCustomerName("Helia");
 
         return List.of(invoice1, invoice2);
+    }
+
+    @Override
+    public Invoice getById(String number) {
+        Invoice invoice = new Invoice();
+        invoice.setNumber(number);
+        invoice.setCustomerName("EDF");
+        invoice.setOrderNumber("on-002");
+
+        return invoice;
     }
 }

@@ -1,6 +1,6 @@
 package com.mycompany.invoise.core.repository.memory;
 
-import com.mycompany.invoise.core.repository.model.Invoice;
+import com.mycompany.invoise.core.model.Invoice;
 import com.mycompany.invoise.core.repository.IInvoiceRepository;
 
 import java.util.ArrayList;
@@ -27,5 +27,14 @@ public class InvoiceRepositoryMemory implements IInvoiceRepository {
         invoice1.setCustomerName("Helia");
 
         return List.of(invoice1, invoice2);
+    }
+
+    @Override
+    public Invoice getById(String number) {
+        Invoice invoice = new Invoice();
+        invoice.setNumber(number);
+        invoice.setCustomerName("EDF");
+
+        return invoice;
     }
 }

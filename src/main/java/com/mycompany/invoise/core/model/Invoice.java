@@ -1,9 +1,9 @@
-package com.mycompany.invoise.core.repository.model;
-
+package com.mycompany.invoise.core.model;
 
 public class Invoice {
     private String number;
     private String customerName;
+    private String orderNumber;
 
     public String getNumber() {
         return number;
@@ -11,6 +11,14 @@ public class Invoice {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     public String getCustomerName() {

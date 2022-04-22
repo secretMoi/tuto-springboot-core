@@ -1,8 +1,8 @@
-package com.mycompany.invoise.core.repository.service.prefix;
+package com.mycompany.invoise.core.service.prefix;
 
-import com.mycompany.invoise.core.repository.model.Invoice;
+import com.mycompany.invoise.core.model.Invoice;
+import com.mycompany.invoise.core.service.IInvoiceService;
 import com.mycompany.invoise.core.repository.IInvoiceRepository;
-import com.mycompany.invoise.core.repository.service.IInvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -53,5 +53,10 @@ public class InvoiceServicePrefix implements IInvoiceService {
     @Override
     public List<Invoice> getInvoiceList() {
         return invoiceRepository.list();
+    }
+
+    @Override
+    public Invoice getInvoiceByNumber(String number) {
+        return invoiceRepository.getById(number);
     }
 }

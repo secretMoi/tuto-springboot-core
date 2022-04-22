@@ -1,8 +1,8 @@
-package com.mycompany.invoise.core.repository.controller.keyboard;
+package com.mycompany.invoise.core.controller.keyboard;
 
-import com.mycompany.invoise.core.repository.controller.IInvoiceController;
-import com.mycompany.invoise.core.repository.model.Invoice;
-import com.mycompany.invoise.core.repository.service.IInvoiceService;
+import com.mycompany.invoise.core.controller.IInvoiceController;
+import com.mycompany.invoise.core.model.Invoice;
+import com.mycompany.invoise.core.service.IInvoiceService;
 
 import java.util.Scanner;
 

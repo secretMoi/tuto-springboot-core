@@ -1,8 +1,8 @@
-package com.mycompany.invoise.core.repository.controller.scan;
+package com.mycompany.invoise.core.controller.scan;
 
-import com.mycompany.invoise.core.repository.controller.IInvoiceController;
-import com.mycompany.invoise.core.repository.model.Invoice;
-import com.mycompany.invoise.core.repository.service.IInvoiceService;
+import com.mycompany.invoise.core.model.Invoice;
+import com.mycompany.invoise.core.service.IInvoiceService;
+import com.mycompany.invoise.core.controller.IInvoiceController;
 
 
 public class InvoiceControllerDouchette implements IInvoiceController {
