@@ -5,6 +5,7 @@ import com.mycompany.invoise.model.Invoice;
 import com.mycompany.invoise.service.IInvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class InvoiceControllerWeb implements IInvoiceController {
@@ -27,5 +28,11 @@ public class InvoiceControllerWeb implements IInvoiceController {
         invoice.setCustomerName(customerName);
 
         invoiceService.createInvoice(invoice);
+    }
+
+    @RequestMapping("invoice-home")
+    public String displayHome() {
+        System.out.println("methode appelée!");
+        return "";
     }
 }
