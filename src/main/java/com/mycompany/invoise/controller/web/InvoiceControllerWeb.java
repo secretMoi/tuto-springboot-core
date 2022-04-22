@@ -33,6 +33,6 @@ public class InvoiceControllerWeb implements IInvoiceController {
     @RequestMapping("invoice-home")
     public String displayHome() {
         System.out.println("methode appelée!");
-        return "";
+        return "index";
     }
 }
