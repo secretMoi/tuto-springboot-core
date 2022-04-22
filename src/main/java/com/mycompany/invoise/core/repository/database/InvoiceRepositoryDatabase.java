@@ -1,14 +1,14 @@
-package com.mycompany.invoise.repository.memory;
+package com.mycompany.invoise.core.repository.database;
 
-import com.mycompany.invoise.model.Invoice;
-import com.mycompany.invoise.repository.IInvoiceRepository;
+import com.mycompany.invoise.core.repository.model.Invoice;
+import com.mycompany.invoise.core.repository.IInvoiceRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class InvoiceRepositoryMemory implements IInvoiceRepository {
+@Repository
+public class InvoiceRepositoryDatabase implements IInvoiceRepository {
 
     private static List<Invoice> invoices = new ArrayList<>();
 
@@ -24,8 +24,8 @@ public class InvoiceRepositoryMemory implements IInvoiceRepository {
         invoice1.setCustomerName("EDF");
 
         Invoice invoice2 = new Invoice();
-        invoice1.setNumber("NUM_2");
-        invoice1.setCustomerName("Helia");
+        invoice2.setNumber("NUM_2");
+        invoice2.setCustomerName("Helia");
 
         return List.of(invoice1, invoice2);
     }

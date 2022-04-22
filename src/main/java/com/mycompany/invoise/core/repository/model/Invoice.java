@@ -1,4 +1,4 @@
-package com.mycompany.invoise.model;
+package com.mycompany.invoise.core.repository.model;
 
 
 public class Invoice {

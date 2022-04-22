@@ -1,9 +1,8 @@
-package com.mycompany.invoise.controller.keyboard;
+package com.mycompany.invoise.core.repository.controller.keyboard;
 
-import com.mycompany.invoise.controller.IInvoiceController;
-import com.mycompany.invoise.model.Invoice;
-import com.mycompany.invoise.service.IInvoiceService;
-import org.springframework.stereotype.Controller;
+import com.mycompany.invoise.core.repository.controller.IInvoiceController;
+import com.mycompany.invoise.core.repository.model.Invoice;
+import com.mycompany.invoise.core.repository.service.IInvoiceService;
 
 import java.util.Scanner;
 
