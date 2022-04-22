@@ -1,8 +1,8 @@
-package com.mycompany.invoise.core.repository.service.number;
+package com.mycompany.invoise.core.service.number;
 
-import com.mycompany.invoise.core.repository.model.Invoice;
+import com.mycompany.invoise.core.model.Invoice;
+import com.mycompany.invoise.core.service.IInvoiceService;
 import com.mycompany.invoise.core.repository.IInvoiceRepository;
-import com.mycompany.invoise.core.repository.service.IInvoiceService;
 
 import java.util.List;
 
@@ -18,6 +18,11 @@ public class InvoiceServiceNumber implements IInvoiceService {
     @Override
     public List<Invoice> getInvoiceList() {
         return invoiceRepository.list();
+    }
+
+    @Override
+    public Invoice getInvoiceByNumber(String number) {
+        return invoiceRepository.getById(number);
     }
 
     private IInvoiceRepository invoiceRepository;
