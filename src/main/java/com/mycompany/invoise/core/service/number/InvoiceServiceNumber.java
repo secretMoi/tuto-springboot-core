@@ -27,8 +27,9 @@ public class InvoiceServiceNumber implements IInvoiceService {
 
     private IInvoiceRepository invoiceRepository;
 
-    public void createInvoice(Invoice invoice) {
+    public Invoice createInvoice(Invoice invoice) {
         invoice.setNumber(String.valueOf(++lastNumber));
         invoiceRepository.create(invoice);
+        return invoice;
     }
 }
